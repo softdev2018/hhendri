@@ -115,7 +115,7 @@
         <div class="form-group">
           <label class="col-md-12 control-label" for="alamat_ktp">Alamat KTP</label>
           <div class="col-md-12">
-            <textarea class="form-control" id="alamat_ktp" name="Alamat KTP"></textarea>
+            <textarea class="form-control" id="alamat_ktp" name="alamat_ktp"></textarea>
           </div>
         </div>
 
@@ -197,6 +197,7 @@
         <!-- Button -->
         <div class="form-group">
           <div class="col-md-4">
+            <input type="submit">
             <button id="kirim" name="kirim" class="btn btn-success">KIRIM</button>
           </div>
         </div>
