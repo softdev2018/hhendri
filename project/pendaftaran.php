@@ -83,6 +83,7 @@
         <!-- Form Name -->
         <legend>Form Pendaftaran</legend>
         <form method="post" action="proses_form.php">
+          <fieldset>
 
         <!-- Text input-->
         <div class="form-group">
@@ -107,7 +108,7 @@
         <div class="form-group">
           <label class="col-md-12 control-label" for="alamat_tinggal">Alamat tinggal</label>
           <div class="col-md-12">
-            <textarea class="form-control" id="alamat_tinggal" name="Alamat tinggal"></textarea>
+            <textarea class="form-control" id="alamat_tinggal" name="alamat_tinggal"></textarea>
           </div>
         </div>
 
@@ -143,7 +144,7 @@
         <div class="form-group">
           <label class="col-md-12 control-label" for="nope">Nomor HP</label>
           <div class="col-md-12">
-            <input id="nope" name="nope" type="tel" placeholder="Masukkan Nomor HP" class="form-control input-md">
+            <input id="nope" name="nope" type="text" placeholder="Masukkan Nomor HP" class="form-control input-md">
           </div>
         </div>
 
@@ -158,20 +159,16 @@
           <label class="col-md-12 control-label" for="goldar">Golongan Darah</label>
           <div class="col-md-12">
             <div class="radio">
-              <label>
-                  <input type="radio" name="optionsRadios" id="a" value="A">&nbsp;A</label>
+              <label><input type="radio" name="goldar" id="a" value="A">&nbsp;A</label>
             </div>
             <div class="radio">
-              <label>
-                  <input type="radio" name="optionsRadios" id="b" value="B">&nbsp;B</label>
+              <label><input type="radio" name="goldar" id="b" value="B">&nbsp;B</label>
             </div>
             <div class="radio">
-              <label>
-                  <input type="radio" name="optionsRadios" id="ab" value="AB">&nbsp;AB</label>
+              <label><input type="radio" name="goldar" id="ab" value="AB">&nbsp;AB</label>
             </div>
             <div class="radio">
-              <label>
-                  <input type="radio" name="optionsRadios" id="o" value="O">&nbsp;O</label>
+              <label><input type="radio" name="goldar" id="o" value="O">&nbsp;O</label>
             </div>
           </div>
         </div>
@@ -180,16 +177,16 @@
           <label class="col-md-12 control-label" for="alumni">Alumni Madrasah</label>
           <div class="col-md-12">
             <div class="checkbox">
-              <label><input type="checkbox" value="TK/RA">&nbsp; TK/RA</label>
+              <label><input type="checkbox" name="alumni1" value="1">&nbsp; TK/RA</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" value="SD/MI">&nbsp; SD/MI</label>
+              <label><input type="checkbox" name="alumni2" value="1">&nbsp; SD/MI</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" value="SMP/MTs">&nbsp; SMP/MTs</label>
+              <label><input type="checkbox" name="alumni3" value="1">&nbsp; SMP/MTs</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" value="SMA/MA">&nbsp; SMA/MA</label>
+              <label><input type="checkbox" name="alumni4" value="1">&nbsp; SMA/MA</label>
             </div>
           </div>
         </div>
@@ -197,12 +194,10 @@
         <!-- Button -->
         <div class="form-group">
           <div class="col-md-4">
-            <input type="submit">
-            <button id="kirim" name="kirim" class="btn btn-success">KIRIM</button>
+            <button type="submit" id="kirim" name="kirim" class="btn btn-success">KIRIM</button>
           </div>
         </div>
 
-        </fieldset>
         </form>
 
 
