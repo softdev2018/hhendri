@@ -21,8 +21,8 @@ $kab=$_POST["kab"];
 $kec=$_POST["kec"];
 $nope=$_POST["nope"];
 $email=$_POST["email"];
-$goldar=@$_POST["goldar"];
-$alumni_tk=@$_POST["alumni1"];
+$goldar=$_POST["goldar"];
+$alumni_tk=$_POST["alumni1"];
 $alumni_sd=@$_POST["alumni2"];
 $alumni_smp=@$_POST["alumni3"];
 $alumni_sma=@$_POST["alumni4"];
@@ -48,14 +48,7 @@ $sql = "INSERT INTO pendaftaran_alumni (nama, jenis_kelamin, alamat_tinggal, ala
 // var_dump($sql); exit();
 $input=mysqli_query($link,$sql);
 
-// if($input) ///jika sukses
-// {
-// echo "Buku tamu berhasil disimpan";
-// }
-// else ///jika gagal
-// {
-// echo "Buku tamu gagal disimpan";
-// }
+
 // ?>
 <!-- <a href="pendaftaran.php">OK</a> -->
 
@@ -140,7 +133,14 @@ $input=mysqli_query($link,$sql);
 
         <br>
         <br>
+		<?php 
+		if($input){
+			
+		?>
+		
         <div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data anda berhasil tersimpan !</div>
+		<?php }
+		?>
         <p class="lead">Pendaftaran anggota KAMAS Regional Soloraya</p>
 
         <!-- Form Name -->

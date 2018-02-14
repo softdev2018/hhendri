@@ -1,3 +1,34 @@
+<?php
+if($_POST){
+	
+
+$link = mysqli_connect("localhost", "root", "", "pendaftaran");
+
+$nama=$_POST["nama"];
+$jenis_kelamin=$_POST["jenis_kelamin"];
+$alamat_tinggal=$_POST["alamat_tinggal"];
+$alamat_ktp=$_POST["alamat_ktp"];
+$prov=$_POST["prov"];
+$kab=$_POST["kab"];
+$kec=$_POST["kec"];
+$nope=$_POST["nope"];
+$email=$_POST["email"];
+$goldar=@$_POST["goldar"];
+$alumni_tk=@$_POST["alumni1"];
+$alumni_sd=@$_POST["alumni2"];
+$alumni_smp=@$_POST["alumni3"];
+$alumni_sma=@$_POST["alumni4"];
+
+$sql = "INSERT INTO pendaftaran_alumni (nama, jenis_kelamin, alamat_tinggal, alamat_ktp, provinsi, kabupaten, kecamatan, nomor_hp, email, golongan_darah, alumni_tk, alumni_sd, alumni_smp, alumni_sma)
+ VALUES ('$nama', '$jenis_kelamin', '$alamat_tinggal', '$alamat_ktp', '$prov', '$kab', '$kec', '$nope', '$email', '$goldar', '$alumni_tk', '$alumni_sd', '$alumni_smp', '$alumni_sma')";
+
+$input=mysqli_query($link,$sql);
+}
+else{
+	$input = null;
+}
+// ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,11 +109,20 @@
         <img class="img-fluid rounded" src="img/bg.png" alt="">
 
         <br><br>
+				<?php 
+		if($input){
+			
+		?>
+		
+        <div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Data anda berhasil tersimpan !</div>
+		<?php }
+		?>
+		
         <p class="lead">Pendaftaran anggota KAMAS Regional Soloraya</p>
 
         <!-- Form Name -->
         <legend>Form Pendaftaran</legend>
-        <form method="post" action="proses_form.php">
+        <form method="post" action="pendaftaran.php">
           <fieldset>
 
         <!-- Text input-->
